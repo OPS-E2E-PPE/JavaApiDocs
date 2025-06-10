@@ -1,5 +1,33 @@
 {
-  "docsets_to_publish": [],
+  "docsets_to_publish": [
+    {
+      "docset_name": "SignalR_Java-PPE",
+      "build_source_folder": ".",
+      "build_output_subfolder": "SignalR_Java-PPE",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "base_path": "java",
+      "site_name": "Docs",
+      "template": "Java_basic",
+      "customized_template_paths": [
+        "_dependentPackages/memberpage.plugins/content"
+      ],
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/SplitTOC.ps1"
+        ]
+      },
+      "SplitTOC": [
+        "docs-ref-autogen/toc.yml"
+      ]
+    }
+  ],
   "notification_subscribers": [],
   "sync_notification_subscribers": [],
   "branches_to_filter": [],
