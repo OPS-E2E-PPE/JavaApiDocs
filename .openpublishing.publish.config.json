@@ -1,54 +1,37 @@
 {
   "docsets_to_publish": [
     {
-      "docset_name": "SignalR_Java",
+      "docset_name": "SignalR_Java-PPE",
       "build_source_folder": ".",
-      "build_output_subfolder": "SignalR_Java",
+      "build_output_subfolder": "SignalR_Java-PPE",
       "locale": "en-us",
       "monikers": [],
-      "moniker_ranges": [
-        "aspnet-signalr-java"
-      ],
-      "open_to_public_contributors": true,
+      "open_to_public_contributors": false,
       "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
-        "JavaMember": "Content",
-        "JavaType": "Content",
-        "JavaPackage": "Content",
-        "JavaEnum": "Content",
-        "ReferenceContainer": "Content"
+        "Conceptual": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "base_path": "java",
       "site_name": "Docs",
+      "template": "Java_basic",
       "customized_template_paths": [
         "_dependentPackages/memberpage.plugins/content"
       ],
       "customized_tasks": {
         "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/SplitTOC.ps1",
-          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
+          "_dependentPackages/CommonPlugins/tools/SplitTOC.ps1"
         ]
       },
       "SplitTOC": [
         "docs-ref-autogen/toc.yml"
-      ],
-      "DiffFolder": [
-        "api"
       ]
     }
   ],
-  "notification_subscribers": [
-    "midai@microsoft.com"
-  ],
+  "notification_subscribers": [],
   "sync_notification_subscribers": [],
   "branches_to_filter": [],
-  "skip_source_output_uploading": false,
-  "need_preview_pull_request": false,
-  "contribution_branch_mappings": {},
+  "need_preview_pull_request": true,
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -58,27 +41,7 @@
     }
   ],
   "branch_target_mapping": {},
-  "need_generate_pdf_url_template": false,
-  "dependent_packages": [
-    {
-      "id": "Microsoft.OpenPublishing.CommonPlugins",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2",
-      "path_to_root": "_dependentPackages/CommonPlugins",
-      "target_framework": "net45",
-      "version": "latest"
-    },
-    {
-      "path_to_root": "_dependentPackages/memberpage.plugins",
-      "target_framework": "net45",
-      "version": "latest",
-      "id": "memberpage.plugins",
-      "nuget_feed": "https://www.myget.org/F/docfx/api/v2"
-    }
-  ],
-  "docs_build_engine": {
-    "name": "docfx_v3"
-  },
-  "redirection_files": [
-    ".openpublishing.redirection.member-page-movement.json"
-  ]
+  "skip_source_output_uploading": false,
+  "contribution_branch_mappings": {},
+  "need_generate_pdf_url_template": false
 }
